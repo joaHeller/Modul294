@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatalistComponent } from './cook/cook.component';
@@ -20,6 +19,8 @@ import { HttpXSRFInterceptor } from './interceptor/http.csrf.interceptor';
 import { AppAuthService } from './service/app.auth.service';
 import { IsInRoleDirective } from './dir/is.in.role.dir';
 import { IsInRolesDirective } from './dir/is.in.roles.dir';
+import { RouterModule } from '@angular/router';
+import { Page6Component } from './pages/page6/page6.component';
 
 
 export const authConfig: AuthConfig = {
@@ -44,8 +45,8 @@ export function storageFactory(): OAuthStorage {
 
 
 @NgModule({
-  declarations: [AppComponent, DatalistComponent, Page1Component, Page2Component, Page3Component, IsInRoleDirective, IsInRolesDirective],
-  imports: [BrowserModule, AppRoutingModule, MatButtonModule, HttpClientModule, MatTableModule, MatFormFieldModule, MatInputModule,FormsModule, ReactiveFormsModule,OAuthModule.forRoot({resourceServer: {sendAccessToken: true}}),],
+  declarations: [AppComponent, DatalistComponent, Page1Component, Page2Component, Page3Component, IsInRoleDirective, IsInRolesDirective, Page6Component],
+  imports: [BrowserModule, RouterModule, AppRoutingModule, MatButtonModule, HttpClientModule, MatTableModule, MatFormFieldModule, MatInputModule,FormsModule, ReactiveFormsModule,OAuthModule.forRoot({resourceServer: {sendAccessToken: true}}),],
   providers: [provideAnimationsAsync(), {provide: AuthConfig, useValue: authConfig},
     {provide: HTTP_INTERCEPTORS, useClass: HttpXSRFInterceptor, multi: true},
     {

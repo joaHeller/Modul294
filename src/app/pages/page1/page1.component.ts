@@ -26,6 +26,7 @@
 
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page1',
@@ -33,14 +34,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./page1.component.scss']
 })
 export class Page1Component  {
+navigateToPage2() {
+throw new Error('Method not implemented.');
+}
   actors = [
     { name: 'Tanja Grandits' },
     { name: 'Jamie Oliver' },
     { name: 'Jamie Oliver' },
     { name: 'Jamie Oliver' },
   ];
+}
 
-  constructor() { }
-
+  export class ToolbarComponent {
+    constructor(private router: Router) {}
+  
+    navigateToPage2() {
+      this.router.navigate(['/page2']);
   
 }
+  }

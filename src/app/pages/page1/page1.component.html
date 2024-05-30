@@ -1,20 +1,18 @@
 <div class="toolbar">
-    <input type="text" placeholder="Suchen">
-    <div class="toolbar-icons">
-      <button>+</button>
-      <button>*</button>
-      <button>↓</button>
-      <button>👤</button>
-    </div>
+  <input type="text" placeholder="Suchen">
+  <div class="toolbar-icons">
+    <button>+</button>
+    <button>*</button>
+    <button [routerLink]="['/page6']">↓</button>
+    <button [routerLink]="['/page2']">👤</button>
   </div>
-  <div class="actor-list">
-    <div class="actor-card" *ngFor="let actor of actors">
-      <div class="actor-image">Cook
-        <img src="C:\Users\joa\Downloads\tanjagrandits2.png" alt="">
-      </div>
-
-      <div class="actor-name">{{ actor.name }}</div>
-      <button class="download-button">↓</button>
+</div>
+<div class="actor-list">
+  <div class="actor-card" *ngFor="let actor of actors">
+    <div class="actor-image">Cook
+      <img src="C:\Users\joa\Downloads\tanjagrandits2.png" alt="">
     </div>
+    <div class="actor-name">{{ actor.name }}</div>
+    <button class="download-button">↓</button>
   </div>
-  
+</div>

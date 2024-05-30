@@ -8,6 +8,7 @@ import { Page2Component } from './pages/page2/page2.component';
 import { appCanActivate } from './guard/app.auth.guard';
 import { AppRoles } from './app.roles';
 import { Page5Component } from './pages/page5/page5.component';
+import { Page6Component } from './pages/page6/page6.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,11 @@ const routes: Routes = [
   path: 'page5',
   component: Page5Component,
   pathMatch: 'full'
+},
+{
+  path: 'page6',
+  component: Page6Component,
+  pathMatch: 'full'
 }
 ];
 
@@ -53,3 +59,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
+
