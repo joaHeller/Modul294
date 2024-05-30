@@ -7,6 +7,7 @@ import { Page4Component } from './pages/page4/page4.component';
 import { Page2Component } from './pages/page2/page2.component';
 import { appCanActivate } from './guard/app.auth.guard';
 import { AppRoles } from './app.roles';
+import { Page5Component } from './pages/page5/page5.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,12 @@ const routes: Routes = [
   component: Page4Component,
   pathMatch: 'full'
 },
+
+{
+  path: 'page5',
+  component: Page5Component,
+  pathMatch: 'full'
+}
 ];
 
 @NgModule({
