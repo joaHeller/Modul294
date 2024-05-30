@@ -30,17 +30,18 @@ describe('DatalistComponent', () => {
 });
 
 import { Component, OnInit } from '@angular/core';
-import { CookService } from '../cook.service';
+
 
 @Component({
   selector: 'app-actor-list',
-  templateUrl: './actor-list.component.html',
+  templateUrl: './cook-list.component.html',
   styleUrls: ['./actor-list.component.css'],
 })
 export class ActorListComponent implements OnInit {
   actors: any[] = [];
+  cookService: any;
 
-  constructor(private n: CookService) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.cookService.getActors().subscribe((data: any[]) => {
