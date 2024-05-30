@@ -34,6 +34,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./page1.component.scss']
 })
 export class Page1Component  {
+actor: any;
 navigateToPage2() {
 throw new Error('Method not implemented.');
 }

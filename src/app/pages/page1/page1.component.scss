@@ -1,46 +1,100 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
 .toolbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background: #f0f0f0;
-  
-    input[type="text"] {
-      flex-grow: 1;
-      margin-right: 10px;
-    }
-  
-    .toolbar-icons button {
-      margin-left: 5px;
-    }
-  }
-  
-  .actor-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 50px;
-  
-    .actor-card {
-      border: 1px solid #ccc;
-      padding: 50px;
-      width: 500px;
-      margin: 50px;
-      text-align: center;
-  
-      .actor-image {
-        height: 100px;
-        width: 100px;
-        background: #eee;
-        margin-bottom: 10px;
-      }
-  
-      .download-button {
-        background: #007bff;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-      }
-    }
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f0f0f0;
+}
+.toolbar input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+.toolbar-icons button {
+  margin-left: 5px;
+}
+.container {
+  width: 50%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+.title {
+  margin-bottom: 20px;
+}
+.title h1 {
+  margin: 0;
+}
+input[type="text"][name="Rezept"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+textarea[name="Zutaten und Schritte"] {
+  width: 80%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Abbrechen {
+  background-color: #d9534f;
+  color: #fff;
+}
+.Abschicken {
+  background-color: #5cb85c;
+  color: #fff;
+}
+.actor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+}
+.actor-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 500px;
+  margin: 15px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.actor-image {
+  height: 200px;
+  width: 200px;
+  background: #eee;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.actor-name {
+  flex-grow: 1;
+}
+.download-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
