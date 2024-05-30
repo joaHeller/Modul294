@@ -1,0 +1,45 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f0f0f0;
+  
+    input[type="text"] {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+  
+    .toolbar-icons button {
+      margin-left: 5px;
+    }
+  }
+  
+  .actor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  
+    .actor-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+  
+      .actor-image {
+        height: 100px;
+        width: 100px;
+        background: #eee;
+        margin-bottom: 10px;
+      }
+  
+      .download-button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  

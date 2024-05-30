@@ -40,10 +40,10 @@ import { CookService } from '../cook.service';
 export class ActorListComponent implements OnInit {
   actors: any[] = [];
 
-  constructor(private cookService: CookService) {}
+  constructor(private n: CookService) {}
 
   ngOnInit(): void {
-    this.cookService.getActors().subscribe((data) => {
+    this.cookService.getActors().subscribe((data: any[]) => {
       this.actors = data;
     });
   }

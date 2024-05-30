@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DatalistComponent } from './cook/datalist.component';
+import { DatalistComponent } from './cook/cook.component';
 import { Page1Component } from './pages/page1/page1.component';
 import { Page3Component } from './pages/page3/page3.component';
 import { Page2Component } from './pages/page2/page2.component';
