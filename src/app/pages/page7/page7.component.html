@@ -1,1 +1,21 @@
-<p>page7 works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gespeicherte Rezepte</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="text" placeholder="Suchen">
+  <div class="toolbar-icons">
+    <button>+</button>
+    <button>*</button>
+    <button>↓</button>
+    <button [routerLink]="['/page2']">👤</button>
+  </div>
+  <h1>Gespeicherte Rezepte</h1>
+  <div id="recipe-list"></div>
+  <script src="scripts.js"></script>
+</body>
+</html>
