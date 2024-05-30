@@ -34,36 +34,7 @@ body {
 .title h1 {
   margin: 0;
 }
-input[type="text"][name="Rezept"] {
-  width: 80%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-textarea[name="Zutaten und Schritte"] {
-  width: 80%;
-  height: 200px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: none;
-}
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.Abbrechen {
-  background-color: #d9534f;
-  color: #fff;
-}
-.Abschicken {
-  background-color: #5cb85c;
-  color: #fff;
-}
+
 .actor-list {
   display: flex;
   flex-wrap: wrap;

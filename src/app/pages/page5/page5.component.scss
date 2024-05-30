@@ -28,9 +28,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  input[type="text"][name="Zutaten und Schritte"] {
-    width: 500px;
-    height: 800px;
+  textarea[name="Zutaten und Schritte"] {
+    width: 80%;
+    height: 200px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -44,10 +44,10 @@ body {
     cursor: pointer;
   }
   .Abbrechen {
-    background-color: gray;
+    background-color: #d9534f;
     color: #fff;
   }
   .Abschicken {
+    background-color: #5cb85c;
     color: #fff;
-    background-color: gray;
   }
