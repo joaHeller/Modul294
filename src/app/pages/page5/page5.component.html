@@ -1,41 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page with Title and Columns</title>
 
-    <div>
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <title>Page with Title and Columns</title>
-        </head>
-        <body>
-          <input type="text" placeholder="Suchen" />
-          <div class="toolbar-icons">
-            <button>+</button>
-            <button>*</button>
-            <button>↓</button>
-            <button [routerLink]="['/page2']">👤</button>
-          </div>
-      
-
-          <div class="container">
-            <div class="title">
-              <h1>Tanja Grandits</h1>
-            </div>
-            <div class="columns"></div>
-
-            <input type="text" name="Rezept" />
-            <br />
-            <input type="text" name="Zutaten und Schritte" />
-            <br />
-
-            <button class="Abbrechen">Abbrechen</button>
-
-            <button class="Abschicken">Abschicken</button>
-          </div>
-        </body>
-      </html>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Tanja Grandits</h1>
     </div>
-
+    <input type="text" name="Rezept" placeholder="Titel eingeben" />
+    <br />
+    <textarea name="Zutaten und Schritte" placeholder="Zutaten und Schritte eingeben"></textarea>
+    <br />
+    <button class="Abbrechen">Abbrechen</button>
+    <button class="Abschicken">Abschicken</button>
+  </div>
+</body>
+</html>
