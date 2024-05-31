@@ -1,15 +1,20 @@
+import { HttpClient } from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FavoriteService {
+export class FavoritenContoller {
 
-  private pageSubject: BehaviorSubject<string> = new BehaviorSubject('');
-  public readonly pageObservable: Observable<string> = this.pageSubject.asObservable();
+  readonly backendUrl = 'department';
+  static backendBaseUrl: string;
 
-  public setPage(page: string) {
-    this.pageSubject.next(page);
+  constructor(private http: HttpClient) {
   }
+
+  public getList(): Observable<FavoritenContoller[]> {
+    return this.http.get<FavoritenContoller[]>(FavoritenContoller.backendBaseUrl + this.backendUrl);
+  }
+
 }

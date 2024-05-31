@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Person } from '../../data/cook';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -9,16 +8,15 @@ import { Observable } from 'rxjs';
 
   export class PersonController {
 
-    readonly backendUrl = 'vehicle';
+    readonly backendUrl = 'PersonController';
+  static backendBaseUrl: string;
   
     constructor(private http: HttpClient) {
     }
   
-    public getList(): Observable<Person[]> {
-      return this.http.get<Person[]>(Person.backendBaseUrl + this.backendUrl);
+    public getList(): Observable<PersonController[]> {
+      return this.http.get<PersonController[]>(PersonController.backendBaseUrl + this.backendUrl);
     }
   
-
- 
 
 }

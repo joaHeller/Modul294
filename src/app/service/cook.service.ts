@@ -1,23 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Person } from '../../data/cook';
-import { environment } from '../../environments/environment.development';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class CookService {
+export class KochController {
 
-  readonly backendUrl = 'person';
-
-  constructor(private httpClient: HttpClient) {}
-
-  public getList(): Observable<Person[]> {
-    return this.httpClient.get<Person[]>(environment.backendBaseUrl + this.backendUrl);
+  readonly backendUrl = 'KochController';
+  static backendBaseUrl: string;
+   
+  constructor(private http: HttpClient) {
   }
 
-  public save(person: Person): Observable<Person> {
-    return this.httpClient.post<Person>('http://localhost:9090/api/person', person);
+  public getList(): Observable<KochController[]> {
+    return this.http.get<KochController[]>(KochController.backendBaseUrl + this.backendUrl);
   }
+
 }
