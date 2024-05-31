@@ -1,23 +1,36 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Person } from '../../data/cook';
-import { environment } from '../../environments/environment.development';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {Department} from '../dataaccess/department';
+import {environment} from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class PersonService {
+export class CookService {
 
-  readonly backendUrl = 'person';
+  readonly backendUrl = 'KochController';
 
-  constructor(private httpClient: HttpClient) {}
-
-  public getList(): Observable<Person[]> {
-    return this.httpClient.get<Person[]>(environment.backendBaseUrl + this.backendUrl);
+  constructor(private http: HttpClient) {
   }
 
-  public save(person: Person): Observable<Person> {
-    return this.httpClient.post<Person>('http://localhost:9090/api/person', person);
+  public getList(): Observable<Department[]> {
+    return this.http.get<Department[]>(environment.backendBaseUrl + this.backendUrl);
+  }
+
+  public getOne(id: number): Observable<KochController> {
+    return this.http.get<KochController>(environment.backendBaseUrl + this.backendUrl + `/${id}`);
+  }
+
+  public update(department: Department): Observable<Department> {
+    return this.http.put<Department>(environment.backendBaseUrl + this.backendUrl + `/${department.id}`, department);
+  }
+
+  public save(department: Department): Observable<Department> {
+    return this.http.post<Department>(environment.backendBaseUrl + this.backendUrl, department);
+  }
+
+  public delete(id: number): Observable<HttpResponse<string>> {
+    return this.http.delete<string>(environment.backendBaseUrl + this.backendUrl + `/${id}`, {observe: 'response'});
   }
 }

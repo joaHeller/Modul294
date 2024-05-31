@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-    selector: 'app-child',
-    templateUrl: './child.component.html',
-    styleUrl: './child.component.scss'
+    selector: 'app-login',
+    templateUrl: './login.html',
+    styleUrl: './login.scss'
   })
 export class ChildComponent {
     @Input()
@@ -12,6 +12,6 @@ export class ChildComponent {
     childEvent = new EventEmitter<string>();
 
     setData(){
-        this.childEvent.emit('Child button clicked!');
+        this.childEvent.emit('Login button clicked!');
     }
 }

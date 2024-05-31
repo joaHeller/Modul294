@@ -23,6 +23,9 @@ import { RouterModule } from '@angular/router';
 import { Page6Component } from './pages/page6/page6.component';
 import { Page7Component } from './pages/page7/page7.component';
 import { Page8Component } from './pages/page8/page8.component';
+import { HeaderComponent } from './component/header/header.component';
+import { NavigationComponent } from './component/navigation/navigation.component';
+import { CookComponent } from './component/cook/cook.component';
 
 
 export const authConfig: AuthConfig = {
@@ -47,7 +50,7 @@ export function storageFactory(): OAuthStorage {
 
 
 @NgModule({
-  declarations: [AppComponent, DatalistComponent, Page1Component, Page2Component, Page3Component, IsInRoleDirective, IsInRolesDirective, Page6Component, Page7Component, Page8Component],
+  declarations: [AppComponent, DatalistComponent, Page1Component, Page2Component, Page3Component, IsInRoleDirective, IsInRolesDirective, Page6Component, Page7Component, Page8Component, HeaderComponent, NavigationComponent, CookComponent],
   imports: [BrowserModule, RouterModule, AppRoutingModule, MatButtonModule, HttpClientModule, MatTableModule, MatFormFieldModule, MatInputModule,FormsModule, ReactiveFormsModule,OAuthModule.forRoot({resourceServer: {sendAccessToken: true}}),],
   providers: [provideAnimationsAsync(), {provide: AuthConfig, useValue: authConfig},
     {provide: HTTP_INTERCEPTORS, useClass: HttpXSRFInterceptor, multi: true},
