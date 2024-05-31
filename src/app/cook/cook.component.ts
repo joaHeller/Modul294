@@ -1,6 +1,6 @@
 import { Person } from '../../data/cook';
 import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
- import { PersonService } from '../service/cook.service';
+import { CookService } from '../service/cook.service';
 
  @Component({
  selector: 'app-datalist',
@@ -9,7 +9,7 @@ templateUrl: './cook.component.html',
 })
  export class DatalistComponent {
 cook: any;
-  constructor(private personService: PersonService) {
+  constructor(private cookService: CookService) {
      this.reloadData();
   }
 
@@ -25,13 +25,13 @@ cook: any;
 
   save(formData: any) {
    const person: Person = Object.assign(formData);
-     this.personService.save(person).subscribe(()=> {
+     this.cookService.save(person).subscribe(()=> {
      this.reloadData();
       });
  }
 
  reloadData() {
-      this.personService.getList().subscribe(persons => {
+      this.cookService.getList().subscribe((persons: Person[]) => {
         this.data= persons;
      });
    }

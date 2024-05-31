@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DatalistComponent } from './cook/cook.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { HTTP_INTERCEPTORS, HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';    
@@ -50,7 +49,7 @@ export function storageFactory(): OAuthStorage {
 
 
 @NgModule({
-  declarations: [AppComponent, DatalistComponent, Page1Component, Page2Component, Page3Component, IsInRoleDirective, IsInRolesDirective, Page6Component, Page7Component, Page8Component, HeaderComponent, NavigationComponent, CookComponent],
+  declarations: [AppComponent, Page1Component, Page2Component, Page3Component, IsInRoleDirective, IsInRolesDirective, Page6Component, Page7Component, Page8Component, HeaderComponent, NavigationComponent, CookComponent],
   imports: [BrowserModule, RouterModule, AppRoutingModule, MatButtonModule, HttpClientModule, MatTableModule, MatFormFieldModule, MatInputModule,FormsModule, ReactiveFormsModule,OAuthModule.forRoot({resourceServer: {sendAccessToken: true}}),],
   providers: [provideAnimationsAsync(), {provide: AuthConfig, useValue: authConfig},
     {provide: HTTP_INTERCEPTORS, useClass: HttpXSRFInterceptor, multi: true},

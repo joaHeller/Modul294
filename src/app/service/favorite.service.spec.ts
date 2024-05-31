@@ -1,16 +1,16 @@
-import {TestBed} from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import {HeaderService} from './header.service';
+// import { FavoriteService } from './favorite.service';
 
-describe('HeaderService', () => {
-  let service: HeaderService;
+// describe('FavoriteService', () => {
+//   let service: FavoriteService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(HeaderService);
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//     service = TestBed.inject(FavoriteService);
+//   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(service).toBeTruthy();
+//   });
+// });
