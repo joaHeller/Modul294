@@ -20,10 +20,6 @@ import { IsInRoleDirective } from './dir/is.in.role.dir';
 import { IsInRolesDirective } from './dir/is.in.roles.dir';
 import { RouterModule } from '@angular/router';
 import { Page6Component } from './pages/page6/page6.component';
-import { Page7Component } from './pages/page7/page7.component';
-import { Page8Component } from './pages/page8/page8.component';
-import { HeaderComponent } from './component/header/header.component';
-import { NavigationComponent } from './component/navigation/navigation.component';
 import { CookComponent } from './cook/cook.component';
 
 
@@ -56,11 +52,7 @@ export function storageFactory(): OAuthStorage {
     Page3Component, 
     IsInRoleDirective, 
     IsInRolesDirective, 
-    Page6Component, 
-    Page7Component, 
-    Page8Component, 
-    HeaderComponent, 
-    NavigationComponent, 
+    Page6Component,  
     CookComponent
   ],
   imports: [
