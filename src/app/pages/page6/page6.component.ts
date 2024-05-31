@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './page6.component.scss'
 })
 export class Page6Component {
+actor: any;
 
 }

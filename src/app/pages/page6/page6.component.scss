@@ -13,3 +13,123 @@
       margin-left: 5px;
     }
   }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f0f0f0;
+  }
+  .toolbar input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  .toolbar-icons button {
+    margin-left: 5px;
+  }
+  .container {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .title {
+    margin-bottom: 20px;
+    align-items: center;
+    padding-right: 50px;
+  }
+  .title h1 {
+    margin: 0;
+  }
+  
+  .actor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  .actor-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 500px;
+    margin: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  .actor-image {
+    height: 200px;
+    width: 200px;
+    background: #eee;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .actor-name {
+    flex-grow: 1;
+  }
+  .download-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f0f0f0;
+  
+    input[type="text"] {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+  
+    .toolbar-icons button {
+      margin-left: 5px;
+    }
+  }
+  
+  .actor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  
+    .actor-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+  
+      .actor-image {
+        height: 100px;
+        width: 100px;
+        background: #eee;
+        margin-bottom: 10px;
+      }
+  
+      .download-button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  
