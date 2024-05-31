@@ -7,6 +7,22 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
   }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f0f0f0;
+  
+    input[type="text"] {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+  
+    .toolbar-icons button {
+      margin-left: 5px;
+    }
+  }
   .container {
     width: 50%;
     background-color: #fff;
