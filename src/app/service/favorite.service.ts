@@ -4,7 +4,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class HeaderService {
+export class FavoriteService {
 
   private pageSubject: BehaviorSubject<string> = new BehaviorSubject('');
   public readonly pageObservable: Observable<string> = this.pageSubject.asObservable();

@@ -7,7 +7,7 @@ import { CookService } from '../service/cook.service';
 templateUrl: './cook.component.html',
  styleUrl: './cook.component.scss',
 })
- export class DatalistComponent {
+ export class CookComponent {
 cook: any;
   constructor(private cookService: CookService) {
      this.reloadData();

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DatalistComponent } from './cook/cook.component';
+import { CookComponent } from './cook/cook.component';
 import { Page1Component } from './pages/page1/page1.component';
 import { Page3Component } from './pages/page3/page3.component';
 import { Page4Component } from './pages/page4/page4.component';
@@ -9,13 +9,14 @@ import { appCanActivate } from './guard/app.auth.guard';
 import { AppRoles } from './app.roles';
 import { Page5Component } from './pages/page5/page5.component';
 import { Page6Component } from './pages/page6/page6.component';
-import { Page7Component } from './pages/page7/page7.component';
+
 import { Page8Component } from './pages/page8/page8.component';
+import { Page7Component } from './pages/page7/page7.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DatalistComponent,
+    component: CookComponent,
   },
 
   {

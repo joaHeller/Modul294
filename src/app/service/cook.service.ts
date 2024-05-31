@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment.development';
 @Injectable({
   providedIn: 'root',
 })
-export class PersonService {
+export class CookService {
 
   readonly backendUrl = 'person';
 
